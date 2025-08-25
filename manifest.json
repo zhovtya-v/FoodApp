@@ -1,6 +1,6 @@
 {
-  "short_name": "FoodApp12",
-  "name": "Create React App Sample",
+  "short_name": "FoodApp",
+  "name": "Food Tracker",
   "icons": [
     {
       "src": "favicon.ico",
