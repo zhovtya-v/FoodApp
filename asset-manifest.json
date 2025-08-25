@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/FoodApp/static/css/main.52870922.css",
+    "main.js": "/FoodApp/static/js/main.552da91a.js",
+    "service-worker.js": "/FoodApp/service-worker.js",
+    "index.html": "/FoodApp/index.html",
+    "main.52870922.css.map": "/FoodApp/static/css/main.52870922.css.map",
+    "main.552da91a.js.map": "/FoodApp/static/js/main.552da91a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52870922.css",
+    "static/js/main.552da91a.js"
+  ]
+}
