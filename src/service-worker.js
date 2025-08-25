@@ -28,7 +28,7 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("activate", (event) => {
-  event.waitUntil(clients.claim()); // одразу активуємо новий SW
+  event.waitUntil(self.clients.claim()); // одразу активуємо новий SW
 });
 
 // Коли виходить нова версія, повідомимо всі вкладки
