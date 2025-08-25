@@ -154,46 +154,46 @@ function MealManager() {
       <h1 className="text-2xl mb-4">Обери продукти за літерами</h1>
 
       {/* Поле День № */}
-      <div className="mb-4">
+      <div className="field-wrap">
         <label className="font-semibold">День №: </label>
         <input
           type="number"
           value={dayNumber}
           onChange={(e) => setDayNumber(e.target.value)}
-          className="border px-2 py-1 rounded w-20"
+          className="input-field"
         />
       </div>
 
       {/* Поля додаткової інформації */}
       <div className="mb-4 space-y-2">
-        <div>
+        <div className="field-wrap">
           <label className="font-semibold">Тренування: </label>
           <input
             type="text"
             value={training}
             onChange={(e) => setTraining(e.target.value)}
             placeholder="Наприклад: 5 кіл по 400 м"
-            className="border px-2 py-1 rounded w-full"
+            className="input-field"
           />
         </div>
-        <div>
+        <div className="field-wrap">
           <label className="font-semibold">Самопочуття: </label>
           <input
             type="text"
             value={feeling}
             onChange={(e) => setFeeling(e.target.value)}
             placeholder="Наприклад: добре"
-            className="border px-2 py-1 rounded w-full"
+            className="input-field"
           />
         </div>
-        <div>
+        <div className="field-wrap">
           <label className="font-semibold">Рухова активність (кроки): </label>
           <input
             type="number"
             value={steps}
             onChange={(e) => setSteps(e.target.value)}
             placeholder="Наприклад: 12000"
-            className="border px-2 py-1 rounded w-full"
+            className="input-field"
           />
         </div>
       </div>

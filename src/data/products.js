@@ -152,22 +152,22 @@ const products = {
 
   ж: [
     {
-      name: "Сир кисломолочний нежирний", fat: "0.2%", maxGrams: 80, letter: "ж"
+      name: "Сир кисломолочний нежирний", fat: "0.2%", maxGrams: 135, letter: "ж"
     },
     {
-      name: "Сири м‘які, тверді, плавлені", maxGrams: 17, letter: "ж"
+      name: "Сири м‘які, тверді, плавлені", maxGrams: 28, letter: "ж"
     },
     {
-      name: "Сметана", fat: "15%", maxGrams: 35, letter: "ж"
+      name: "Сметана", fat: "15%", maxGrams: 55, letter: "ж"
     },
     {
-      name: "Кефір", fat: "1%", maxGrams: 135, letter: "ж"
+      name: "Кефір", fat: "1%", maxGrams: 225, letter: "ж"
     },
     {
-      name: "Несолодкий йогурт", fat: "1%", maxGrams: 125, letter: "ж"
+      name: "Несолодкий йогурт", fat: "1%", maxGrams: 220, letter: "ж"
     },
     {
-      name: "Молоко", fat: "1%", maxGrams: 140, letter: "ж"
+      name: "Молоко", fat: "1%", maxGrams: 225, letter: "ж"
     },
   ],
 

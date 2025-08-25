@@ -1,3 +1,27 @@
+body {
+  background: #ddf2d1;
+}
+h1.text-2xl {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.field-wrap {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.field-wrap label {
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+
+.input-field {
+  border: none;
+  border-bottom: 1px solid ;
+  background: transparent;
+  width: 100%;
+}
 .selected-letter {
   background-color: #e5e7eb; /* сірий фон */
   color: #9ca3af; /* сірий текст */
@@ -5,8 +29,19 @@
 }
 
 .active-letter {
-  background-color: white;
+  background: rgba(255, 255, 255, 0.3);
   cursor: pointer;
+}
+
+.product-list {
+  padding: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.product-list h3 {
+  margin-top: 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .product-list ul {
@@ -18,7 +53,9 @@
 }
 
 .product-list ul li {
-    margin-right: 15px;
+    margin-right: 1.5rem;
+    display: inline-flex;
+    margin-bottom: 0.2rem;
 }
 
 .product-list li label {
