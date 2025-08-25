@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import products from "./data/products";
 import ProductSelector from "./ProductSelector";
 import './MealManager.css';
@@ -12,6 +12,35 @@ function MealManager() {
   const [training, setTraining] = useState("");
   const [feeling, setFeeling] = useState("");
   const [steps, setSteps] = useState("");
+
+  // 🔹 Відновлення даних при завантаженні
+  useEffect(() => {
+    const saved = localStorage.getItem("mealManagerData");
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      setSelection(parsed.selection || {});
+      setMeals(parsed.meals || []);
+      setUsedLetters(new Set(parsed.usedLetters || []));
+      setDayNumber(parsed.dayNumber || "");
+      setTraining(parsed.training || "");
+      setFeeling(parsed.feeling || "");
+      setSteps(parsed.steps || "");
+    }
+  }, []);
+
+  // 🔹 Збереження даних у localStorage
+  useEffect(() => {
+    const data = {
+      selection,
+      meals,
+      usedLetters: Array.from(usedLetters),
+      dayNumber,
+      training,
+      feeling,
+      steps,
+    };
+    localStorage.setItem("mealManagerData", JSON.stringify(data));
+  }, [selection, meals, usedLetters, dayNumber, training, feeling, steps]);
 
   const handleSelectProduct = (letter, product, checked) => {
     setSelection((prev) => {
@@ -114,6 +143,9 @@ function MealManager() {
       setTraining("");
       setFeeling("");
       setSteps("");
+
+      // 🔹 Очистка localStorage після відправки
+      localStorage.removeItem("mealManagerData");
     });
   };
 
