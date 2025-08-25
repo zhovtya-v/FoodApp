@@ -19,7 +19,24 @@ clientsClaim();
 // Their URLs are injected into the manifest variable below.
 // This variable must be present somewhere in your service worker file,
 // even if you decide not to use precaching. See https://cra.link/PWA
-precacheAndRoute(self.__WB_MANIFEST);
+// Кешування файлів, що створив CRA build
+precacheAndRoute(self.__WB_MANIFEST || []);
+
+// Слухаємо нові версії
+self.addEventListener("install", (event) => {
+  self.skipWaiting(); // одразу ставимо новий SW
+});
+
+self.addEventListener("activate", (event) => {
+  event.waitUntil(clients.claim()); // одразу активуємо новий SW
+});
+
+// Коли виходить нова версія, повідомимо всі вкладки
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
+});
 
 // Set up App Shell-style routing, so that all navigation requests
 // are fulfilled with your index.html shell. Learn more at
